@@ -1,4 +1,5 @@
 import pulp as pl
+import os
 
 def max_matrix_sum(matrix):
     #-------------Inicializálás-------------
@@ -25,7 +26,9 @@ def max_matrix_sum(matrix):
     return max_sum
 
 
-with open("pr_euler_345.txt") as f:
+base = os.path.dirname(__file__)
+path = os.path.join(base, "pr_euler_345.txt")
+with open(path) as f:
     lines = f.read().strip().split("\n")
     matrix = []
     for line in lines:
